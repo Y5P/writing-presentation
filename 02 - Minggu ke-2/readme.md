@@ -77,7 +77,7 @@ Dalam membuat sebuah website pernahkah anda bertanya bagaimanakah cara kita untu
 Sebelum melakukan DOM pada web, kita akan mencari terlebih dahulu element-element yang akan dilakukan DOM ini. Untuk memanggil element-element tersebut bisa kita gunakan berbagai cara seperti dibawah ini :
 ![Mencari DOM](./dom2.png)
 1. document.getElementByID("id-element") //mencari element menggunakan id
-2. document.getElementByClass("class-element") //mencari element menggunakan class
+2. document.getElementsByClassName("class-element") //mencari element menggunakan class
 3. document.querySelector("#id-element elemen") // mencari element berdasarkan kombinasi selector
 Ketiga cara tersebut bisa kita gunakan untuk memanggil element yang akan kita lakukan DOM.
 
