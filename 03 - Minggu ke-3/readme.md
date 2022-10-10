@@ -218,9 +218,73 @@ Asynchronus merupakan proses yang di lakukan secara bersamaan tanpa mengganggu a
 
 ## Kunci utama pada Asynchronus
 * **Callback** adalah sebuah fungsi yang di eksekusi di dalam fungsi lain yang memanggilnya.
-* **Promise** diilustrasikan seperti janji pada di dunia nyata. Promis memiliki 3 keadaan yaitu pending, rejected dan fuldilled.
-* **Async — await** adalah salah satu fitur baru dari javascript yang di gunakan untuk menangani hasil dari sebuah promise. Caranya adalah dengan menambahkan kata ‘async’ di depan sebuah fungsi untuk mengubahnya menjadi asynchronous.Sedangkan await berfungsi untuk menunda sebuah kode di jalankan, sampai proses asynchronous berhasil.
+```
+const notify = () => {
 
+  console.log('Download complete!');
+
+};
+
+const download = (url, callback) => {
+
+  console.log(`Downloading from ${url}....`);
+
+  callback();
+
+};
+
+const url = 'https://brachio.site/download';
+
+download(url, notify);
+```
+* **Promise** diilustrasikan seperti janji pada di dunia nyata. Promis memiliki 3 keadaan yaitu pending, rejected dan fuldilled.
+```
+let progress = 100;
+
+const download = new Promise((resolve, reject) => {
+
+  if (progress === 100) {
+
+    resolve('Download complete');
+
+  } else {
+
+    reject('Download failed');
+
+  }
+
+});
+```
+* **Async — await** adalah salah satu fitur baru dari javascript yang di gunakan untuk menangani hasil dari sebuah promise. Caranya adalah dengan menambahkan kata ‘async’ di depan sebuah fungsi untuk mengubahnya menjadi asynchronous.Sedangkan await berfungsi untuk menunda sebuah kode di jalankan, sampai proses asynchronous berhasil.
+```
+const getStatus = (url) => {
+
+  console.log(`Downloading from ${url}...`);
+
+  return new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+
+      resolve('Download Complete');
+
+    }, 3000);
+
+  });
+
+};
+
+async function download(url) {
+
+  let status = await getStatus(url); // tunggu sampai promise selesai
+
+  console.log(status);
+
+}
+
+const url = 'https://brachio.site/download';
+
+download(url);
+```
 # Storage
 ## 1. Local Storage
 Local Storage merupakan salah satu cara yang dapat digunakan untuk menyimpan data di web browser. Pada localStorage penyimpanan data tidak memiliki kadaluarsa, artinya data yang disimpan tetap ada meskipun browser telah ditutup.  
