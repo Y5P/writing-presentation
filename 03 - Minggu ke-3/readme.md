@@ -162,6 +162,25 @@ for(let key in object){
     
 }
 ```
+## 7. Array of Object
+Persis seperti namanya array of objet merupakan object yang berada didalam sebuah array. Jadi didalam sebuah array terdapat sebuah object yang dimana saat kita mengakses index tersebut akan memanggil sebuah object.
+```
+let hewan = [
+    {
+        nama:"Ayam",
+        kaki : 2
+    },
+    {
+        nama:"kucing",
+        kaki : 4
+    }
+]
+
+hewan.forEach(res =>{
+    console.log(res)
+})
+```
+
 # Rekursif
 ## 1. Apa itu rekursif?
 Fungsi rekursif merupakan sebuah fungsi yang memanggil dirinya sendiri, baik secara langsung maupun tidak langsung. Rekursif merupakan salah satu teknik penyelesaian masalah yang sangat berguna. Ketika menyelesaikan masalah secara rekursif, umumnya kita memecah-mecah masalah besar menjadi banyak masalah yang lebih kecil, dan menyelesaikan masalah kecil tersebut dengan fungsi rekursif.
