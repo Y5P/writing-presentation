@@ -198,4 +198,6 @@ console.log(pow(2,3)) // Output : 8
 Asynchronus merupakan proses yang di lakukan secara bersamaan tanpa mengganggu aktivitas lainnya atau tidak berurutan. 
 
 ## Kunci utama pada Asynchronus
-* Callback
+* **Callback** adalah sebuah fungsi yang di eksekusi di dalam fungsi lain yang memanggilnya.
+* **Promise** diilustrasikan seperti janji pada di dunia nyata. Promis memiliki 3 keadaan yaitu pending, rejected dan fuldilled.
+* **Async — await** adalah salah satu fitur baru dari javascript yang di gunakan untuk menangani hasil dari sebuah promise. Caranya adalah dengan menambahkan kata ‘async’ di depan sebuah fungsi untuk mengubahnya menjadi asynchronous.Sedangkan await berfungsi untuk menunda sebuah kode di jalankan, sampai proses asynchronous berhasil.
