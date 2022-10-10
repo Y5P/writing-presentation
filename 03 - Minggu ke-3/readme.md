@@ -201,3 +201,49 @@ Asynchronus merupakan proses yang di lakukan secara bersamaan tanpa mengganggu a
 * **Callback** adalah sebuah fungsi yang di eksekusi di dalam fungsi lain yang memanggilnya.
 * **Promise** diilustrasikan seperti janji pada di dunia nyata. Promis memiliki 3 keadaan yaitu pending, rejected dan fuldilled.
 * **Async — await** adalah salah satu fitur baru dari javascript yang di gunakan untuk menangani hasil dari sebuah promise. Caranya adalah dengan menambahkan kata ‘async’ di depan sebuah fungsi untuk mengubahnya menjadi asynchronous.Sedangkan await berfungsi untuk menunda sebuah kode di jalankan, sampai proses asynchronous berhasil.
+
+# Storage
+## 1. Local Storage
+Local Storage merupakan salah satu cara yang dapat digunakan untuk menyimpan data di web browser. Pada localStorage penyimpanan data tidak memiliki kadaluarsa, artinya data yang disimpan tetap ada meskipun browser telah ditutup.  
+
+Untuk menggunakan localstorage kita bisa menggunakan metode berikut:
+1. setItem(key, value) digunakan untuk menyimpan data
+2. getItem(key) digunakan untuk mengambil data
+3. removeItem(key) digunakan untuk menghapus data berdasarkan key
+4. clear() digunakan untuk menghapus semua data
+5. key() digunakan untuk mengambil nomor dari setiap key   
+
+```
+//menyimpan data
+localStorage.setItem('key',value)
+
+//mengambil data
+localStorage.getItem('key')
+
+//menghapus data
+localStorage.removeItem('key')
+
+localStorage.clear()
+```
+
+## Session Storage
+Session Storage menyimpan data secara sementara, data akan menghilang saat tab ditutup atau browser ditutup. Metode dalam sessionStorage sama halnya dengan localStorage, untuk lebih mengetahui penggunaan mari kita coba
+
+Untuk menggunakan localstorage kita bisa menggunakan metode berikut:
+1. setItem(key, value) digunakan untuk menyimpan data
+2. getItem(key) digunakan untuk mengambil data
+3. removeItem(key) digunakan untuk menghapus data berdasarkan key
+4. clear() digunakan untuk menghapus semua data
+5. key() digunakan untuk mengambil nomor dari setiap key   
+```
+//menyimpan data
+sessionStorage.setItem('key',value)
+
+//mengambil data
+sessionStorage.getItem('key')
+
+//menghapus data
+sessionStorage.removeItem('key')
+
+sessionStorage.clear()
+```
