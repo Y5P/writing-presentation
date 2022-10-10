@@ -140,3 +140,62 @@ console.log(hewan)
 Output : 
 {nama:"kucing",isCarnivora:true}
 */
+```
+## 5. Object Method
+Kita bisa menambahkan method pada properti object. Caranya yaitu kita memasukan sebuah function pada value propertinya. contohnya seperti berikut :
+```
+const pintu = {
+    keluar: function(){
+        return "Tutup pintu"
+    },
+    masuk: function(){
+        return "Buka pintu"
+    }
+}
+console.log(pintu.masuk()) // Output : Buka pintu
+```
+
+## 6. Looping pada Object
+Looping pada object digunakan untuk membantu kita agar bisa mengakses/menampilkan seluruh properti object didalamnya.
+```
+for(let key in object){
+    
+}
+```
+# Rekursif
+## 1. Apa itu rekursif?
+Fungsi rekursif merupakan sebuah fungsi yang memanggil dirinya sendiri, baik secara langsung maupun tidak langsung. Rekursif merupakan salah satu teknik penyelesaian masalah yang sangat berguna. Ketika menyelesaikan masalah secara rekursif, umumnya kita memecah-mecah masalah besar menjadi banyak masalah yang lebih kecil, dan menyelesaikan masalah kecil tersebut dengan fungsi rekursif.
+```
+function rekursif(){
+    rekursif()
+}
+
+//rekursif dengan kondisi
+function rekursif(){
+    if(kondisi){
+        //berhenti memanggil
+    }else{
+        rekursif()
+    }
+}
+```
+## 2. Ciri-ciri rekursif
+* Fungsi rekursif selalu memiliki kondisi yang menyatakan kapan fungsi tersebut berhenti. Kondisi ini harus dapat dibuktikan akan tercapai, karena jika tidak tercapai maka kita tidak dapat membuktikan bahwa fungsi akan berhenti, yang berarti algoritma kita tidak benar.
+* Fungsi rekursif selalu memanggil dirinya sendiri sambil mengurangi atau memecahkan data masukan setiap panggilannya. Hal ini penting diingat, karena tujuan utama dari rekursif ialah memecahkan masalah dengan mengurangi masalah tersebut menjadi masalah-masalah kecil.
+## 3. Contoh kasus
+```
+function pow(x,n){
+    if (n==1){
+        return x
+    }else{
+        return x * pow (x,n-1)
+    }
+}
+console.log(pow(2,3)) // Output : 8
+```
+
+# Asynchronus
+Asynchronus merupakan proses yang di lakukan secara bersamaan tanpa mengganggu aktivitas lainnya atau tidak berurutan. 
+
+## Kunci utama pada Asynchronus
+* Callback
